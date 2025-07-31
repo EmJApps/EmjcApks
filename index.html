@@ -147,7 +147,7 @@
     </div>
 
     <script>
-        // Datos de apps y juegos con Spotify y Geometry Dash incluidos en sus listas respectivas
+        // Datos completos con Spotify en apps y Geometry Dash en games
         const appsData = {
             featured: [
                 {
@@ -336,7 +336,7 @@
                             </div>
                             <div class="flex-1">
                                 <h3 class="font-bold text-lg text-gray-800">${app.name}</h3>
-                                <p class="text-gray-600 text-sm mt-1">${app.description}</p>
+                                <p class="text-gray-600 text-sm mt-1">${app.description || ''}</p>
                                 <div class="flex items-center space-x-4 mt-3 text-sm text-gray-500">
                                     <span>⭐ ${app.rating}</span>
                                     <span>📥 ${app.downloads}</span>
