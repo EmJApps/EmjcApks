@@ -147,7 +147,7 @@
     </div>
 
     <script>
-        // Datos completos con Spotify en apps y Geometry Dash en games
+        // Datos con Spotify primero en apps y Geometry Dash primero en games
         const appsData = {
             featured: [
                 {
@@ -179,6 +179,13 @@
                 }
             ],
             apps: [
+                {
+                    name: "Spotify Premium",
+                    icon: "🎵",
+                    rating: "4.7",
+                    downloads: "25M+",
+                    size: "35 MB"
+                },
                 {
                     name: "Instagram Plus",
                     icon: "📸",
@@ -222,13 +229,6 @@
                     size: "35 MB"
                 },
                 {
-                    name: "Spotify Premium",
-                    icon: "🎵",
-                    rating: "4.7",
-                    downloads: "25M+",
-                    size: "35 MB"
-                },
-                {
                     name: "Snapchat Plus",
                     icon: "👻",
                     rating: "4.2",
@@ -251,6 +251,13 @@
                 }
             ],
             games: [
+                {
+                    name: "Geometry Dash",
+                    icon: "📐",
+                    rating: "4.3",
+                    downloads: "65M+",
+                    size: "90 MB"
+                },
                 {
                     name: "PUBG Mobile",
                     icon: "🔫",
@@ -306,13 +313,6 @@
                     rating: "4.5",
                     downloads: "70M+",
                     size: "200 MB"
-                },
-                {
-                    name: "Geometry Dash",
-                    icon: "📐",
-                    rating: "4.3",
-                    downloads: "65M+",
-                    size: "90 MB"
                 },
                 {
                     name: "Temple Run 2",
@@ -385,7 +385,7 @@
             `;
         }
 
-        // Category filtering
+        // Show/hide categories
         function showCategory(category, event) {
             const buttons = document.querySelectorAll('.category-btn');
             const sections = document.querySelectorAll('.app-section');
@@ -409,7 +409,7 @@
             }
         }
 
-        // Download function with simulated modal
+        // Simulated download modal
         function downloadApp(appName) {
             const modal = document.getElementById('downloadModal');
             const message = document.getElementById('downloadMessage');
@@ -423,7 +423,6 @@
             }, 2000);
         }
 
-        // Close modal
         function closeDownloadModal() {
             const modal = document.getElementById('downloadModal');
             modal.classList.add('hidden');
@@ -437,7 +436,6 @@
             // Mostrar todas las secciones para búsqueda
             showCategory('all');
 
-            // Buscar en apps y games (sección visible)
             const appsContainer = document.getElementById('appsGrid');
             const gamesContainer = document.getElementById('gamesGrid');
             const featuredContainer = document.getElementById('featuredApps');
