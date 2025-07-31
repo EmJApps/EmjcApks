@@ -68,15 +68,15 @@
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-center space-x-4">
                 <button class="category-btn active px-6 py-2 rounded-full font-medium transition-all duration-300" 
-                        onclick="showCategory('all')">
+                        onclick="showCategory('all', event)">
                     Todas
                 </button>
                 <button class="category-btn px-6 py-2 rounded-full font-medium bg-gray-100 hover:bg-gray-200 transition-all duration-300" 
-                        onclick="showCategory('apps')">
+                        onclick="showCategory('apps', event)">
                     📱 Aplicaciones
                 </button>
                 <button class="category-btn px-6 py-2 rounded-full font-medium bg-gray-100 hover:bg-gray-200 transition-all duration-300" 
-                        onclick="showCategory('games')">
+                        onclick="showCategory('games', event)">
                     🎮 Juegos
                 </button>
             </div>
@@ -147,6 +147,7 @@
     </div>
 
     <script>
+        // Datos de apps y juegos con Spotify y Geometry Dash incluidos en sus listas respectivas
         const appsData = {
             featured: [
                 {
@@ -221,11 +222,11 @@
                     size: "35 MB"
                 },
                 {
-                    name: "Twitter Pro",
-                    icon: "🐦",
-                    rating: "4.0",
-                    downloads: "9M+",
-                    size: "40 MB"
+                    name: "Spotify Premium",
+                    icon: "🎵",
+                    rating: "4.7",
+                    downloads: "25M+",
+                    size: "35 MB"
                 },
                 {
                     name: "Snapchat Plus",
@@ -352,7 +353,7 @@
             `).join('');
         }
 
-        // Render apps grid
+        // Render apps and games grids
         function renderApps() {
             const appsContainer = document.getElementById('appsGrid');
             const gamesContainer = document.getElementById('gamesGrid');
@@ -361,7 +362,7 @@
             gamesContainer.innerHTML = appsData.games.map(app => createAppCard(app)).join('');
         }
 
-        // Create app card
+        // Create app card HTML
         function createAppCard(app) {
             return `
                 <div class="app-card bg-white rounded-lg shadow-md overflow-hidden">
@@ -385,20 +386,18 @@
         }
 
         // Category filtering
-        function showCategory(category) {
+        function showCategory(category, event) {
             const buttons = document.querySelectorAll('.category-btn');
             const sections = document.querySelectorAll('.app-section');
             const featuredSection = document.querySelector('section:first-of-type'); // Featured section
 
             buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            if(event) event.target.classList.add('active');
 
             if (category === 'all') {
-                // Show featured section and all app sections
                 featuredSection.style.display = 'block';
                 sections.forEach(section => section.style.display = 'block');
             } else {
-                // Hide featured section when viewing specific categories
                 featuredSection.style.display = 'none';
                 sections.forEach(section => {
                     if (section.dataset.category === category) {
@@ -410,32 +409,14 @@
             }
         }
 
-        // Get download link by app name
-        function getDownloadLink(appName) {
-            switch(appName) {
-                case "Spotify Premium":
-                    return "https://cold-na-phx-6.gofile.io/download/web/3dde35a2-f510-472f-9436-b7341821fda5/spotify.apk";
-                case "Geometry Dash":
-                    return "https://store-na-phx-2.gofile.io/download/web/7623d771-94e0-4f5c-9fff-a02e9809272e/geometry.apk";
-                default:
-                    return "#"; // Para apps sin enlace real
-            }
-        }
-
-        // Download function
+        // Download function with simulated modal
         function downloadApp(appName) {
-            const link = getDownloadLink(appName);
             const modal = document.getElementById('downloadModal');
             const message = document.getElementById('downloadMessage');
-
+            
             message.textContent = `Descargando ${appName}...`;
             modal.classList.remove('hidden');
             modal.classList.add('flex');
-
-            if (link && link !== "#") {
-                // Abrir el enlace real en otra pestaña
-                window.open(link, "_blank");
-            }
 
             setTimeout(() => {
                 message.textContent = `¡${appName} se ha descargado exitosamente!`;
@@ -452,19 +433,28 @@
         // Search functionality
         document.getElementById('searchInput').addEventListener('input', function(e) {
             const searchTerm = e.target.value.toLowerCase();
-            const appCards = document.querySelectorAll('.app-card');
-            
-            appCards.forEach(card => {
-                const appName = card.querySelector('h3').textContent.toLowerCase();
-                if (appName.includes(searchTerm)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
+
+            // Mostrar todas las secciones para búsqueda
+            showCategory('all');
+
+            // Buscar en apps y games (sección visible)
+            const appsContainer = document.getElementById('appsGrid');
+            const gamesContainer = document.getElementById('gamesGrid');
+            const featuredContainer = document.getElementById('featuredApps');
+
+            [appsContainer, gamesContainer, featuredContainer].forEach(container => {
+                Array.from(container.children).forEach(card => {
+                    const appName = card.querySelector('h3').textContent.toLowerCase();
+                    if (appName.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             });
         });
 
-        // Initialize the page
+        // Inicialización
         document.addEventListener('DOMContentLoaded', function() {
             renderFeaturedApps();
             renderApps();
