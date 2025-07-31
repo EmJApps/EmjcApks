@@ -146,375 +146,362 @@
         </div>
     </div>
 
-<script>
-    // Datos con Spotify primero en apps y Geometry Dash primero en games con links para descarga directa
-    const appsData = {
-        featured: [
-            {
-                name: "WhatsApp Plus",
-                category: "apps",
-                icon: "💬",
-                rating: "4.5",
-                downloads: "10M+",
-                size: "25 MB",
-                description: "Versión modificada de WhatsApp con funciones extra",
-                link: "https://gofile.io/d/CslHh5" // Pon aquí el enlace correcto si tienes
-            },
-            {
-                name: "Minecraft PE",
-                category: "games", 
-                icon: "🧱",
-                rating: "4.8",
-                downloads: "50M+",
-                size: "150 MB",
-                description: "El famoso juego de construcción en tu móvil",
-                link: "#" // Ejemplo sin link, cámbialo si tienes
-            },
-            {
-                name: "Spotify Premium",
-                category: "apps",
-                icon: "🎵",
-                rating: "4.7",
-                downloads: "25M+",
-                size: "35 MB",
-                description: "Música sin límites y sin anuncios",
-                link: "https://store-na-phx-2.gofile.io/download/web/7623d771-94e0-4f5c-9fff-a02e9809272e/spotify.apk"
-            }
-        ],
-        apps: [
-            {
-                name: "Spotify Premium",
-                icon: "🎵",
-                rating: "4.7",
-                downloads: "25M+",
-                size: "35 MB",
-                link: "https://store-na-phx-2.gofile.io/download/web/7623d771-94e0-4f5c-9fff-a02e9809272e/spotify.apk"
-            },
-            {
-                name: "Instagram Plus",
-                icon: "📸",
-                rating: "4.3",
-                downloads: "8M+",
-                size: "45 MB",
-                link: "#"
-            },
-            {
-                name: "YouTube Vanced",
-                icon: "📺",
-                rating: "4.6",
-                downloads: "15M+",
-                size: "55 MB",
-                link: "#"
-            },
-            {
-                name: "TikTok Pro",
-                icon: "🎬",
-                rating: "4.4",
-                downloads: "12M+",
-                size: "85 MB",
-                link: "#"
-            },
-            {
-                name: "Netflix Mod",
-                icon: "🎭",
-                rating: "4.2",
-                downloads: "6M+",
-                size: "95 MB",
-                link: "#"
-            },
-            {
-                name: "Facebook Lite",
-                icon: "👥",
-                rating: "4.1",
-                downloads: "20M+",
-                size: "25 MB",
-                link: "#"
-            },
-            {
-                name: "Telegram X",
-                icon: "✈️",
-                rating: "4.7",
-                downloads: "18M+",
-                size: "35 MB",
-                link: "#"
-            },
-            {
-                name: "Snapchat Plus",
-                icon: "👻",
-                rating: "4.2",
-                downloads: "7M+",
-                size: "65 MB",
-                link: "#"
-            },
-            {
-                name: "Discord Mod",
-                icon: "🎮",
-                rating: "4.5",
-                downloads: "11M+",
-                size: "50 MB",
-                link: "#"
-            },
-            {
-                name: "Zoom Pro",
-                icon: "📹",
-                rating: "4.3",
-                downloads: "14M+",
-                size: "75 MB",
-                link: "#"
-            }
-        ],
-        games: [
-            {
-                name: "Geometry Dash",
-                icon: "📐",
-                rating: "4.3",
-                downloads: "65M+",
-                size: "90 MB",
-                link: "https://cold-na-phx-6.gofile.io/download/web/3dde35a2-f510-472f-9436-b7341821fda5/spotify.apk" // Pon el link correcto para Geometry Dash
-            },
-            {
-                name: "PUBG Mobile",
-                icon: "🔫",
-                rating: "4.5",
-                downloads: "100M+",
-                size: "720 MB",
-                link: "#"
-            },
-            {
-                name: "Among Us",
-                icon: "👾",
-                rating: "4.3",
-                downloads: "80M+",
-                size: "250 MB",
-                link: "#"
-            },
-            {
-                name: "Clash Royale",
-                icon: "⚔️",
-                rating: "4.4",
-                downloads: "60M+",
-                size: "180 MB",
-                link: "#"
-            },
-            {
-                name: "Subway Surfers",
-                icon: "🏃",
-                rating: "4.6",
-                downloads: "90M+",
-                size: "120 MB",
-                link: "#"
-            },
-            {
-                name: "Free Fire",
-                icon: "🔥",
-                rating: "4.2",
-                downloads: "75M+",
-                size: "450 MB",
-                link: "#"
-            },
-            {
-                name: "Call of Duty Mobile",
-                icon: "🎯",
-                rating: "4.7",
-                downloads: "85M+",
-                size: "550 MB",
-                link: "#"
-            },
-            {
-                name: "Candy Crush Saga",
-                icon: "🍭",
-                rating: "4.1",
-                downloads: "95M+",
-                size: "80 MB",
-                link: "#"
-            },
-            {
-                name: "Clash of Clans",
-                icon: "🏰",
-                rating: "4.5",
-                downloads: "70M+",
-                size: "200 MB",
-                link: "#"
-            },
-            {
-                name: "Temple Run 2",
-                icon: "🏃‍♂️",
-                rating: "4.4",
-                downloads: "55M+",
-                size: "90 MB",
-                link: "#"
-            }
-        ]
-    };
+    <script>
+        // Datos con Spotify primero en apps y Geometry Dash primero en games con links para descarga directa
+        const appsData = {
+            featured: [
+                {
+                    name: "WhatsApp Plus",
+                    category: "apps",
+                    icon: "💬",
+                    rating: "4.5",
+                    downloads: "10M+",
+                    size: "25 MB",
+                    description: "Versión modificada de WhatsApp con funciones extra",
+                    link: "https://gofile.io/d/CslHh5"
+                },
+                {
+                    name: "Minecraft PE",
+                    category: "games", 
+                    icon: "🧱",
+                    rating: "4.8",
+                    downloads: "50M+",
+                    size: "150 MB",
+                    description: "El famoso juego de construcción en tu móvil",
+                    link: "#"
+                },
+                {
+                    name: "Spotify Premium",
+                    category: "apps",
+                    icon: "🎵",
+                    rating: "4.7",
+                    downloads: "25M+",
+                    size: "35 MB",
+                    description: "Música sin límites y sin anuncios",
+                    link: "https://store-na-phx-2.gofile.io/download/web/7623d771-94e0-4f5c-9fff-a02e9809272e/spotify.apk"
+                }
+            ],
+            apps: [
+                {
+                    name: "Spotify Premium",
+                    icon: "🎵",
+                    rating: "4.7",
+                    downloads: "25M+",
+                    size: "35 MB",
+                    link: "https://store-na-phx-2.gofile.io/download/web/7623d771-94e0-4f5c-9fff-a02e9809272e/spotify.apk"
+                },
+                {
+                    name: "Instagram Plus",
+                    icon: "📸",
+                    rating: "4.3",
+                    downloads: "8M+",
+                    size: "45 MB",
+                    link: "#"
+                },
+                {
+                    name: "YouTube Vanced",
+                    icon: "📺",
+                    rating: "4.6",
+                    downloads: "15M+",
+                    size: "55 MB",
+                    link: "#"
+                },
+                {
+                    name: "TikTok Pro",
+                    icon: "🎬",
+                    rating: "4.4",
+                    downloads: "12M+",
+                    size: "85 MB",
+                    link: "#"
+                },
+                {
+                    name: "Netflix Mod",
+                    icon: "🎭",
+                    rating: "4.2",
+                    downloads: "6M+",
+                    size: "95 MB",
+                    link: "#"
+                },
+                {
+                    name: "Facebook Lite",
+                    icon: "👥",
+                    rating: "4.1",
+                    downloads: "20M+",
+                    size: "25 MB",
+                    link: "#"
+                },
+                {
+                    name: "Telegram X",
+                    icon: "✈️",
+                    rating: "4.7",
+                    downloads: "18M+",
+                    size: "35 MB",
+                    link: "#"
+                },
+                {
+                    name: "Snapchat Plus",
+                    icon: "👻",
+                    rating: "4.2",
+                    downloads: "7M+",
+                    size: "65 MB",
+                    link: "#"
+                },
+                {
+                    name: "Discord Mod",
+                    icon: "🎮",
+                    rating: "4.5",
+                    downloads: "11M+",
+                    size: "50 MB",
+                    link: "#"
+                },
+                {
+                    name: "Zoom Pro",
+                    icon: "📹",
+                    rating: "4.3",
+                    downloads: "14M+",
+                    size: "75 MB",
+                    link: "#"
+                }
+            ],
+            games: [
+                {
+                    name: "Geometry Dash",
+                    icon: "📐",
+                    rating: "4.3",
+                    downloads: "65M+",
+                    size: "90 MB",
+                    link: "https://cold-na-phx-6.gofile.io/download/web/3dde35a2-f510-472f-9436-b7341821fda5/geometrydash.apk"
+                },
+                {
+                    name: "PUBG Mobile",
+                    icon: "🔫",
+                    rating: "4.5",
+                    downloads: "100M+",
+                    size: "720 MB",
+                    link: "#"
+                },
+                {
+                    name: "Among Us",
+                    icon: "👾",
+                    rating: "4.3",
+                    downloads: "80M+",
+                    size: "250 MB",
+                    link: "#"
+                },
+                {
+                    name: "Clash Royale",
+                    icon: "⚔️",
+                    rating: "4.4",
+                    downloads: "60M+",
+                    size: "180 MB",
+                    link: "#"
+                },
+                {
+                    name: "Subway Surfers",
+                    icon: "🏃",
+                    rating: "4.6",
+                    downloads: "90M+",
+                    size: "120 MB",
+                    link: "#"
+                },
+                {
+                    name: "Free Fire",
+                    icon: "🔥",
+                    rating: "4.2",
+                    downloads: "75M+",
+                    size: "450 MB",
+                    link: "#"
+                },
+                {
+                    name: "Call of Duty Mobile",
+                    icon: "🎯",
+                    rating: "4.7",
+                    downloads: "85M+",
+                    size: "550 MB",
+                    link: "#"
+                },
+                {
+                    name: "Candy Crush Saga",
+                    icon: "🍭",
+                    rating: "4.1",
+                    downloads: "95M+",
+                    size: "80 MB",
+                    link: "#"
+                },
+                {
+                    name: "Clash of Clans",
+                    icon: "🏰",
+                    rating: "4.5",
+                    downloads: "70M+",
+                    size: "200 MB",
+                    link: "#"
+                },
+                {
+                    name: "Temple Run 2",
+                    icon: "🏃‍♂️",
+                    rating: "4.4",
+                    downloads: "55M+",
+                    size: "90 MB",
+                    link: "#"
+                }
+            ]
+        };
 
-    // Render destacado
-    function renderFeaturedApps() {
-        const container = document.getElementById('featuredApps');
-        container.innerHTML = appsData.featured.map(app => `
-            <div class="app-card bg-white rounded-xl shadow-md overflow-hidden">
-                <div class="p-6">
-                    <div class="flex items-start space-x-4">
-                        <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center text-2xl">
-                            ${app.icon}
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="font-bold text-lg text-gray-800">${app.name}</h3>
-                            <p class="text-gray-600 text-sm mt-1">${app.description || ''}</p>
-                            <div class="flex items-center space-x-4 mt-3 text-sm text-gray-500">
-                                <span>⭐ ${app.rating}</span>
-                                <span>📥 ${app.downloads}</span>
-                                <span>📦 ${app.size}</span>
+        // Render destacado
+        function renderFeaturedApps() {
+            const container = document.getElementById('featuredApps');
+            container.innerHTML = appsData.featured.map(app => `
+                <div class="app-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center text-2xl">
+                                ${app.icon}
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-lg text-gray-800">${app.name}</h3>
+                                <p class="text-gray-600 text-sm mt-1">${app.description || ''}</p>
+                                <div class="flex items-center space-x-4 mt-3 text-sm text-gray-500">
+                                    <span>⭐ ${app.rating}</span>
+                                    <span>📥 ${app.downloads}</span>
+                                    <span>📦 ${app.size}</span>
+                                </div>
                             </div>
                         </div>
+                        <button class="download-btn w-full mt-4 text-white py-3 rounded-lg font-medium" data-link="${app.link}" data-name="${app.name}">
+                            Descargar APK
+                        </button>
                     </div>
-                    <button onclick="downloadApp('${app.name}')" 
-                            class="download-btn w-full mt-4 text-white py-3 rounded-lg font-medium" data-link="${app.link}">
-                        Descargar APK
-                    </button>
                 </div>
-            </div>
-        `).join('');
-    }
-
-    // Render apps y juegos
-    function renderApps() {
-        const appsContainer = document.getElementById('appsGrid');
-        const gamesContainer = document.getElementById('gamesGrid');
-
-        appsContainer.innerHTML = appsData.apps.map(app => createAppCard(app)).join('');
-        gamesContainer.innerHTML = appsData.games.map(app => createAppCard(app)).join('');
-    }
-
-    // Crear app card
-    function createAppCard(app) {
-        return `
-            <div class="app-card bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="p-4">
-                    <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center text-xl mb-3">
-                        ${app.icon}
-                    </div>
-                    <h3 class="font-semibold text-gray-800 mb-2">${app.name}</h3>
-                    <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
-                        <span>⭐ ${app.rating}</span>
-                        <span>${app.size}</span>
-                    </div>
-                    <p class="text-xs text-gray-400 mb-3">📥 ${app.downloads}</p>
-                    <button onclick="downloadApp('${app.name}')" 
-                            class="download-btn w-full text-white py-2 rounded-lg text-sm font-medium" data-link="${app.link || '#'}">
-                        Descargar
-                    </button>
-                </div>
-            </div>
-        `;
-    }
-
-    // Mostrar/ocultar categorías
-    function showCategory(category, event) {
-        const buttons = document.querySelectorAll('.category-btn');
-        const sections = document.querySelectorAll('.app-section');
-        const featuredSection = document.querySelector('section:first-of-type'); // Destacados
-
-        buttons.forEach(btn => btn.classList.remove('active'));
-        if(event) event.target.classList.add('active');
-
-        if (category === 'all') {
-            featuredSection.style.display = 'block';
-            sections.forEach(section => section.style.display = 'block');
-        } else {
-            featuredSection.style.display = 'none';
-            sections.forEach(section => {
-                if (section.dataset.category === category) {
-                    section.style.display = 'block';
-                } else {
-                    section.style.display = 'none';
-                }
-            });
-        }
-    }
-
-    // Descargar APK usando el link del botón
-    function downloadApp(appName) {
-        // Buscamos el botón que disparó la función para obtener su link
-        // Como estamos usando inline onclick con nombre, vamos a encontrar el botón usando el event
-        // Pero aquí no tenemos event, así que modificamos para pasar el event al llamar
-
-        // Para esto mejor cambiaremos los botones a listeners para evitar confusión
-    }
-
-    // Mostrar modal y forzar descarga
-    function showDownloadModal(appName, link) {
-        const modal = document.getElementById('downloadModal');
-        const message = document.getElementById('downloadMessage');
-
-        message.textContent = `Descargando ${appName}...`;
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-
-        // Forzar descarga con un enlace invisible
-        if(link && link !== "#"){
-            const a = document.createElement('a');
-            a.href = link;
-            a.download = '';
-            a.target = '_blank';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        } else {
-            message.textContent = `No hay enlace de descarga disponible para ${appName}.`;
+            `).join('');
         }
 
-        // Mensaje final
-        setTimeout(() => {
-            message.textContent = `¡${appName} se ha descargado (o se inició la descarga)!`;
-        }, 2000);
-    }
+        // Render apps y juegos
+        function renderApps() {
+            const appsContainer = document.getElementById('appsGrid');
+            const gamesContainer = document.getElementById('gamesGrid');
 
-    function closeDownloadModal() {
-        const modal = document.getElementById('downloadModal');
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-    }
+            appsContainer.innerHTML = appsData.apps.map(app => createAppCard(app)).join('');
+            gamesContainer.innerHTML = appsData.games.map(app => createAppCard(app)).join('');
+        }
 
-    // Añadir eventos para botones después de renderizar
-    function addDownloadListeners() {
-        document.querySelectorAll('.download-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const appCard = e.target.closest('.app-card');
-                const appName = appCard.querySelector('h3').textContent;
-                const link = e.target.getAttribute('data-link');
-                showDownloadModal(appName, link);
+        // Crear tarjeta app
+        function createAppCard(app) {
+            return `
+                <div class="app-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center text-xl mb-3">
+                            ${app.icon}
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">${app.name}</h3>
+                        <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
+                            <span>⭐ ${app.rating}</span>
+                            <span>${app.size}</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mb-3">📥 ${app.downloads}</p>
+                        <button class="download-btn w-full text-white py-2 rounded-lg text-sm font-medium" data-link="${app.link}" data-name="${app.name}">
+                            Descargar
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Mostrar categoría
+        function showCategory(category, event) {
+            const buttons = document.querySelectorAll('.category-btn');
+            const sections = document.querySelectorAll('.app-section');
+            const featuredSection = document.querySelector('section:first-of-type'); // Destacados
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            if(event) event.target.classList.add('active');
+
+            if (category === 'all') {
+                featuredSection.style.display = 'block';
+                sections.forEach(section => section.style.display = 'block');
+            } else {
+                featuredSection.style.display = 'none';
+                sections.forEach(section => {
+                    if (section.dataset.category === category) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            }
+        }
+
+        // Mostrar modal y forzar descarga
+        function showDownloadModal(appName, link) {
+            const modal = document.getElementById('downloadModal');
+            const message = document.getElementById('downloadMessage');
+
+            message.textContent = `Descargando ${appName}...`;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+
+            if(link && link !== "#"){
+                const a = document.createElement('a');
+                a.href = link;
+                a.download = '';
+                a.target = '_blank';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            } else {
+                message.textContent = `No hay enlace de descarga disponible para ${appName}.`;
+            }
+
+            setTimeout(() => {
+                message.textContent = `¡${appName} se ha descargado (o se inició la descarga)!`;
+            }, 2000);
+        }
+
+        // Cerrar modal
+        function closeDownloadModal() {
+            const modal = document.getElementById('downloadModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Añadir listeners a botones descarga
+        function addDownloadListeners() {
+            document.querySelectorAll('.download-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const appName = e.target.getAttribute('data-name');
+                    const link = e.target.getAttribute('data-link');
+                    showDownloadModal(appName, link);
+                });
+            });
+        }
+
+        // Búsqueda
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+
+            showCategory('all');
+
+            const appsContainer = document.getElementById('appsGrid');
+            const gamesContainer = document.getElementById('gamesGrid');
+            const featuredContainer = document.getElementById('featuredApps');
+
+            [appsContainer, gamesContainer, featuredContainer].forEach(container => {
+                Array.from(container.children).forEach(card => {
+                    const appName = card.querySelector('h3').textContent.toLowerCase();
+                    if (appName.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             });
         });
-    }
 
-    // Buscador
-    document.getElementById('searchInput').addEventListener('input', function(e) {
-        const searchTerm = e.target.value.toLowerCase();
-
-        showCategory('all');
-
-        const appsContainer = document.getElementById('appsGrid');
-        const gamesContainer = document.getElementById('gamesGrid');
-        const featuredContainer = document.getElementById('featuredApps');
-
-        [appsContainer, gamesContainer, featuredContainer].forEach(container => {
-            Array.from(container.children).forEach(card => {
-                const appName = card.querySelector('h3').textContent.toLowerCase();
-                if (appName.includes(searchTerm)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', function() {
+            renderFeaturedApps();
+            renderApps();
+            addDownloadListeners();
         });
-    });
-
-    // Inicialización
-    document.addEventListener('DOMContentLoaded', function() {
-        renderFeaturedApps();
-        renderApps();
-        addDownloadListeners();
-    });
-</script>
+    </script>
 </body>
 </html>
